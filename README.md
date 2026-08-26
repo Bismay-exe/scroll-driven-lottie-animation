@@ -28,7 +28,7 @@ project/
 
 ```
 
-### 5. Setup instructions
+### 4. Setup instructions
 
 1. Create the project folder structure outlined above.
 2. Ensure you have an image to act as the compressing hero media saved at `assets/image.jpg`.
