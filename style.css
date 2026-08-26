@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap');
+
+:root {
+    --bg-light: #f5f5f5;
+    --bg-darker: #e8e8e4;
+    --text-dark: #121212;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Hide scrollbars for clean scroll experience */
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Navigation Badge */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem;
+    z-index: 100;
+    pointer-events: auto;
+}
+
+nav a {
+    display: inline-block;
+    background-color: var(--text-dark);
+    color: var(--bg-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0.5rem 1.4rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+}
+
+/* Page Sections */
+section {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about {
+    background-color: var(--bg-darker);
+}
+
+h1 {
+    width: 60%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: clamp(3rem, 7vw, 7.5rem);
+    line-height: 0.9;
+    letter-spacing: -0.02em;
+}
+
+.spacer {
+    background-color: var(--bg-light);
+    height: 100vh;
+}
+
+/* Fixed Global Container holding Character + Hero Media */
+.lottie-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    pointer-events: none;
+    z-index: 10;
+    overflow: hidden;
+}
+
+/* The Lottie Character */
+.lottie {
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+    margin-right: -40px;
+    /* Overlaps slightly over the front edge of the media */
+    margin-bottom: -5px;
+    z-index: 2;
+    will-change: transform;
+}
+
+/* The Hero Image (starts full screen, compresses into the corner) */
+.hero-image {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0px;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 1;
+    will-change: width, height, border-radius, margin;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .about h1 {
+        width: 90%;
+    }
+
+    .lottie {
+        width: 100px;
+        height: 100px;
+        margin-right: -25px;
+    }
+}

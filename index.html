@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll-Driven Lottie Animation | GSAP</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Fixed Navigation -->
+    <nav>
+        <a href="#">Award</a>
+    </nav>
+
+    <!-- Scroll Sections -->
+    <section class="hero"></section>
+
+    <section class="about">
+        <h1>The scroll-driven<br />Lottie Animation</h1>
+    </section>
+
+    <!-- Spacer to allow scrolling fully past the about section -->
+    <section class="spacer">
+        <h1>THE END</h1>
+    </section>
+
+    <!-- Fixed Container for Animation & Image -->
+    <div class="lottie-container">
+        <div class="lottie"></div>
+        <div class="hero-image">
+            <img src="./assets/image.jpg" alt="Hero Media" />
+        </div>
+    </div>
+
+    <!-- Library CDNs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
